@@ -14,7 +14,7 @@ for (let i = 0; i < 10; i++) {
         emails.push(email)
         if (emails.length === 10)
             randomEmail.innerHTML = emails
-        console.log(emails)
+        console.log(email)
     })
 }
 
