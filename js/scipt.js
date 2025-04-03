@@ -5,15 +5,24 @@
 
 
 const randomEmail = document.getElementById('random-email')
+const  button = document.getElementById('btn')
 
 
-for (let i = 0; i < 10; i++) {
-    axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((resp) => {
-        let email = resp.data.response;
-        
-        const createEmails = document.createElement('div')
-        createEmails.textContent = email;
-        randomEmail.appendChild(createEmails)
-
-    })
+const play =()=>{
+    randomEmail.innerHTML = '';
+    for (let i = 0; i < 10; i++) {
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((resp) => {
+            let email = resp.data.response;
+            
+            const createEmails = document.createElement('div')
+            createEmails.textContent = email;
+            randomEmail.appendChild(createEmails)
+    
+        })
+    }
 }
+
+
+button.addEventListener('click', play);
+
+play();
