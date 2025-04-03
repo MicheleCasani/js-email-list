@@ -16,8 +16,8 @@ const play =()=>{
             
             const createEmails = document.createElement('div')
             createEmails.textContent = email;
+            createEmails.classList.add('email-style')
             randomEmail.appendChild(createEmails)
-    
         })
     }
 }

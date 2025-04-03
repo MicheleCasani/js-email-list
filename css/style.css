@@ -1,0 +1,22 @@
+
+.container{
+    width: 300px;
+}
+
+.row{
+    border: dashed 3px white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.col-12{
+    padding: 20px
+}
+.email-style {
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
