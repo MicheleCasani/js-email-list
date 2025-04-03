@@ -5,15 +5,17 @@
 
 
 const randomEmail = document.getElementById('random-email')
-let emails;
+let emails = [];
 
-for(let i=0; i < 10; i++){
-axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((resp) => {
-    let email
-    emails = resp.data.response;
-    console.log(emails)
-    randomEmail.innerHTML = emails
-})
+
+for (let i = 0; i < 10; i++) {
+    axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((resp) => {
+        let email = resp.data.response;
+        emails.push(email)
+        if (emails.length === 10)
+            randomEmail.innerHTML = emails
+        console.log(emails)
+    })
 }
 
 
